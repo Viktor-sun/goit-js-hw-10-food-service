@@ -12,4 +12,4 @@ ref.checkbox.addEventListener('change', onCheckboxHandler);
 saveTheme();
 saveValueCheckbox();
 
-ref.menuItems.insertAdjacentHTML('afterend', template(menu));
+ref.menuItems.insertAdjacentHTML('afterbegin', template(menu));
