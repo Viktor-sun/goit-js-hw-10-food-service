@@ -2,15 +2,12 @@ import ref from './references';
 const { checkbox, body } = ref;
 import themes from './themes';
 
-const theme = localStorage.getItem('theme');
 export const saveTheme = () => {
-  if (theme) {
-    body.classList.add(theme);
-  }
-};
-
-export const saveValueCheckbox = () => {
+  const theme = localStorage.getItem('theme');
   if (theme === themes.DARK) {
+    body.classList.add(theme);
     checkbox.checked = true;
+  } else {
+    body.classList.add(themes.LIGHT);
   }
 };
